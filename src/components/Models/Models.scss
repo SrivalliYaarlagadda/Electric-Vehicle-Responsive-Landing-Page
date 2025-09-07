@@ -1,0 +1,328 @@
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+// .models-section {
+//   padding: 4rem;
+//   background-color: #000;
+//   color: #fff;
+//   font-family: sans-serif;
+// }
+
+// .models-header {
+//   max-width: 700px;
+//   margin-bottom: 3rem;
+
+//   h1 {
+//     font-size: 3rem;
+//     font-weight: 700;
+//     margin-bottom: 1rem;
+//   }
+
+//   p {
+//     font-size: 1.1rem;
+//     line-height: 1.6;
+//     max-width: 600px;
+//   }
+// }
+
+// .models-grid {
+//   display: flex;
+//   gap: 2rem;
+//   justify-content: flex-start;
+//   flex-wrap: wrap;
+// }
+
+// .model-card {
+//   position: relative;
+//   width: 620px;
+//   height: 370px;
+//   border-radius: 4px;
+//   overflow: hidden;
+//   background-color: #111;
+//   flex: 1 1 48%;
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .car-image {
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+//   display: block;
+// }
+
+// .card-content {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   padding: 1.5rem;
+//   height: 100%;
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   background: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0));
+
+//   h2 {
+//     font-size: 2rem;
+//     font-weight: 600;
+//   }
+
+//   .card-bottom {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+
+//     .price {
+//       font-size: 1.1rem;
+//     }
+
+//     a {
+//       font-size: 0.95rem;
+//       color: #fff;
+//       text-decoration: none;
+
+//       &:hover {
+//         text-decoration: underline;
+//       }
+//     }
+//   }
+// }
+.explore-models {
+  padding: 3rem 2rem;
+  background: #0e0f11;
+
+  .section-header {
+    text-align: left;
+    margin-bottom: 2.5rem;
+    max-width: 500px; // restrict width for wrapping into ~3 lines
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.8rem;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      color: #bbb;
+      line-height: 1.6;
+    }
+  }
+
+  .models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+  }
+
+  .model-card {
+    position: relative;
+    height: 460px;
+    perspective: 1500px;
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      transition: transform 0.7s ease-in-out;
+    }
+
+    /* Front */
+    .card-front {
+      background: #000;
+      color: #fff;
+      transform: rotateY(0deg);
+
+      .car-image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+      }
+
+      .card-front-overlay {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+
+        h3 {
+          font-size: 1.4rem;
+          font-weight: 600;
+          text-align: left;
+        }
+
+        .card-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 1rem;
+          color: #fff;
+
+          strong {
+            color: #39aaf5;
+          }
+
+          .learn-more {
+            font-size: 0.95rem;
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+
+    /* Back */
+    .card-back {
+      background: linear-gradient(135deg, #0a0f14, #162229);
+      color: #fff;
+      padding: 1.5rem;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3 {
+          font-size: 1.3rem;
+          font-weight: 600;
+        }
+
+        .view-gallery {
+          background: none;
+          border: none;
+          font-size: 0.9rem;
+          color: #39aaf5;
+          cursor: pointer;
+        }
+      }
+
+      p {
+        font-size: 0.9rem;
+        color: #ddd;
+        margin-bottom: 0.6rem;
+        line-height: 1.4;
+      }
+
+      .specs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        .spec-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 0.5rem;
+
+          .icon {
+            font-size: 1.4rem;
+            color: #39aaf5;
+          }
+
+          strong {
+            font-size: 1rem;
+          }
+
+          p {
+            font-size: 0.8rem;
+            color: #bbb;
+          }
+        }
+      }
+
+      .card-footer-back {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          font-size: 1rem;
+
+          strong {
+            color: #39aaf5;
+          }
+        }
+
+        .buttons {
+          display: flex;
+          gap: 0.6rem;
+
+          button {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+          }
+
+          .features-btn {
+            background: #111;
+            color: #fff;
+            border: 1px solid #555;
+
+            &:hover {
+              background: #39aaf5;
+              color: #000;
+            }
+          }
+
+          .order-btn {
+            background: #fff;
+            color: #000;
+
+            &:hover {
+              background: #39aaf5;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover .card-front {
+      transform: rotateY(-180deg);
+    }
+
+    &:hover .card-back {
+      transform: rotateY(0deg);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+    top: 40%;
+  }
+
+  .hero-info {
+    top: 55%;
+    width: 90%;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

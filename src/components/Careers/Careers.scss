@@ -1,0 +1,88 @@
+.join-astro {
+  background-color: #111827; // dark background
+  color: #fff;
+  padding: 4rem 2rem;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  &__content {
+    flex: 1;
+    margin-left: 3rem; // ✅ space before content (on left side)
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+
+      .astro {
+        font-family: "Orbitron", sans-serif;
+        font-weight: 400;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      color: #d1d5db;
+    }
+
+    .join-btn {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 25px;
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: #38bdf8; // ✅ sky blue hover
+        color: #fff;
+      }
+    }
+  }
+
+  &__image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 400px;   // square shape
+      height: 400px;  // square shape
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+    top: 40%;
+  }
+
+  .hero-info {
+    top: 55%;
+    width: 90%;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

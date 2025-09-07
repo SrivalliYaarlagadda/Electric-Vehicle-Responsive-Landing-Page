@@ -1,0 +1,126 @@
+
+
+.navbar {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9), transparent);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__logo img {
+    height: 10px;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 2rem;
+
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: skyblue;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 1rem;
+
+    .icon {
+      color: white;    // Always white
+      font-size: 1.4rem;
+      cursor: pointer;
+
+      &:hover {
+        color: white;  // No color change on hover
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    &__menu {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 1rem 0;
+      margin-top: 1rem;
+
+      a {
+        padding: 0.5rem 1rem;
+      }
+
+      &.open {
+        display: flex;
+      }
+    }
+
+    &__icons {
+      display: none;
+    }
+
+    &__toggle {
+      display: block;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+    top: 40%;
+  }
+
+  .hero-info {
+    top: 55%;
+    width: 90%;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

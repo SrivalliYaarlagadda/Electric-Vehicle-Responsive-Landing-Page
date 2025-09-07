@@ -1,0 +1,273 @@
+// .hero {
+//   height: 100vh;
+//   width: 100%;
+//   background-image: url('../assets/car-background.png');
+//   background-size: cover;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 0 1rem;
+
+//   .hero-content {
+//     text-align: center;
+//     color: white;
+//     max-width: 800px;
+
+//     h1 {
+//       font-size: 4.5rem;
+//       font-weight: 800;
+//       margin-bottom: 1rem;
+//     }
+
+//     h2 {
+//       font-size: 2rem;
+//       font-weight: 500;
+//       margin-bottom: 1rem;
+//     }
+
+//     p {
+//       font-size: 1rem;
+//       color: #f0f0f0;
+//       line-height: 1.6;
+//       max-width: 600px;
+//       margin: 0 auto 2rem;
+//     }
+
+//     .hero-buttons {
+//       display: flex;
+//       gap: 1rem;
+//       justify-content: center;
+
+//       button {
+//         padding: 0.8rem 2rem;
+//         border-radius: 30px;
+//         font-size: 1rem;
+//         border: 2px solid white;
+//         cursor: pointer;
+//         transition: all 0.3s ease;
+
+//         &.order {
+//           background-color: white;
+//           color: black;
+
+//           &:hover {
+//             background-color: #38bdf8;
+//             color: white;
+//             border-color: #38bdf8;
+//           }
+//         }
+
+//         &.test-drive {
+//           background-color: transparent;
+//           color: white;
+
+//           &:hover {
+//             background-color: #38bdf8;
+//             color: white;
+//             border-color: #38bdf8;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .hero {
+//   width: 100%;
+//   height: 600px;  // Adjust as needed
+//   position: relative;
+// }
+
+// .hero-image {
+//   width: 100%;
+//   height: 100%;
+//   background-size: cover;
+//   background-position: center;
+//   position: relative;
+// }
+
+// .hero-title {
+//   position: absolute;
+//   top: 20%;   // Adjust vertical position here
+//   left: 50%;
+//   transform: translateX(-50%);
+//   font-size: 4rem;
+//   font-weight: 900;
+//   color: white;
+//   z-index: 10;
+//   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+// }
+
+// .hero-info {
+//   position: absolute;
+//   bottom: 10%;
+//   width: 100%;
+//   text-align: center;
+//   color: white;
+//   padding: 0 20px;
+//   z-index: 10;
+// }
+
+// .hero-info h2 {
+//   font-size: 1.8rem;
+//   margin-bottom: 1rem;
+// }
+
+// .hero-info p {
+//   font-size: 1rem;
+//   max-width: 600px;
+//   margin: 0 auto 2rem;
+// }
+
+// .hero-buttons {
+//   display: flex;
+//   justify-content: center;
+//   gap: 1rem;
+// }
+
+// .order-now {
+//   padding: 0.75rem 2rem;
+//   border-radius: 30px;
+//   background: white;
+//   color: black;
+//   border: none;
+//   font-weight: 600;
+//   cursor: pointer;
+// }
+
+// .test-drive {
+//   padding: 0.75rem 2rem;
+//   border-radius: 30px;
+//   background: transparent;
+//   border: 2px solid white;
+//   color: white;
+//   font-weight: 600;
+//   cursor: pointer;
+// }
+
+
+
+.hero {
+  width: 100%;
+  height: 600px;  // Adjust as needed
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-title {
+  position: absolute;
+  top: 22%;   // Adjust vertical position here
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
+  z-index: 10;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  animation: fallFromTop 1s ease-out forwards;
+}
+
+@keyframes fallFromTop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -150%); // start way above
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0); // end at correct position
+  }
+}
+
+
+
+.hero-info {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+.hero-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-info p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.order-now {
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  background: white;
+  color: black;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: #87ceeb; 
+    color: black;               
+  }
+}
+
+.test-drive {
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    background-color: #87ceeb;  // sky blue
+    color: black;               // text color for contrast
+    border-color: #87ceeb;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+    top: 40%;
+  }
+
+  .hero-info {
+    top: 55%;
+    width: 90%;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

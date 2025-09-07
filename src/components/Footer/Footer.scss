@@ -1,0 +1,75 @@
+.footer {
+  background: #0a0a0a;
+  color: #ccc;
+  padding: 15px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+
+  .footer-left {
+    p {
+      margin: 0;
+      color: #ccc;
+
+      .brand {
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+  }
+
+  .footer-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    a {
+      color: #ccc !important;          /* force override */
+      text-decoration: none !important; 
+    }
+
+    a:hover {
+      color: #ccc !important;          /* prevent blue */
+      text-decoration: underline !important;
+    }
+
+    .divider {
+      width: 1px;
+      height: 16px;
+      background: #555;
+    }
+
+    .email {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      .icon {
+        font-size: 14px;
+        color: #ccc;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+    top: 40%;
+  }
+
+  .hero-info {
+    top: 55%;
+    width: 90%;
+  }
+
+  nav a {
+    font-size: 14px;
+    margin: 0 10px;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Electric-Vehicle-Responsive-Landing-Page/static/css/main.c63e2353.css",
-    "main.js": "/Electric-Vehicle-Responsive-Landing-Page/static/js/main.f47f7b2f.js",
+    "main.css": "/Electric-Vehicle-Responsive-Landing-Page/static/css/main.926ec005.css",
+    "main.js": "/Electric-Vehicle-Responsive-Landing-Page/static/js/main.3b8dfddc.js",
     "static/media/car-background.png": "/Electric-Vehicle-Responsive-Landing-Page/static/media/car-background.381a7c38a1f0f81abcb2.png",
     "static/media/model1.png": "/Electric-Vehicle-Responsive-Landing-Page/static/media/model1.381a7c38a1f0f81abcb2.png",
     "static/media/dealer.png": "/Electric-Vehicle-Responsive-Landing-Page/static/media/dealer.271eb210f8840f57d5d8.png",
@@ -9,11 +9,11 @@
     "static/media/model2.png": "/Electric-Vehicle-Responsive-Landing-Page/static/media/model2.6d61829a0205f9088f84.png",
     "static/media/missionLogo.png": "/Electric-Vehicle-Responsive-Landing-Page/static/media/missionLogo.e708682e9a3c1a7abe44.png",
     "index.html": "/Electric-Vehicle-Responsive-Landing-Page/index.html",
-    "main.c63e2353.css.map": "/Electric-Vehicle-Responsive-Landing-Page/static/css/main.c63e2353.css.map",
-    "main.f47f7b2f.js.map": "/Electric-Vehicle-Responsive-Landing-Page/static/js/main.f47f7b2f.js.map"
+    "main.926ec005.css.map": "/Electric-Vehicle-Responsive-Landing-Page/static/css/main.926ec005.css.map",
+    "main.3b8dfddc.js.map": "/Electric-Vehicle-Responsive-Landing-Page/static/js/main.3b8dfddc.js.map"
   },
   "entrypoints": [
-    "static/css/main.c63e2353.css",
-    "static/js/main.f47f7b2f.js"
+    "static/css/main.926ec005.css",
+    "static/js/main.3b8dfddc.js"
   ]
 }
